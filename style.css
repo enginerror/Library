@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Outfit", serif;
+    cursor: default;
+    background-color: var(--main-color);
+}
+
+:root {
+    --main-color: #000000;
+    --border-color: #1d1d1d;
+    --icon-color: #f1f1f1;
+    --logo-color: #447CDF;
+    --hover-color: #191B28;
+}
+
+p {
+    color: var(--icon-color);
+    font-size: 14.5px;
+}
+
+svg {
+    height: 22px;
+    fill: var(--icon-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+    /*   -- CODE SECTION --   */
+
+section {
+    height: 100vh;
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 105px 1fr;
+}
+
+        /*   -- SIDE MENU SECTION --   */
+
+aside {
+    background-color: var(--main-color);
+    border-right: 1px solid var(--border-color);
+    grid-row-start: 1;
+    grid-row-end: 6;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    border-radius: 0 20px 20px 0;
+    padding: 5px;
+}
+
+    /* - LOGO SECTION - */
+
+.logo-area {
+    display: grid;
+    place-items: center;
+    .logo-text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        #logo-img {
+            height: 33px;
+            width: 33px;
+            fill: var(--logo-color);
+        }
+        #logo-font {
+            font-family: "Unbounded", serif;
+            font-size: 17px;
+        }
+    }
+}
+
+    /* - NAV SECTION - */
+
+.nav-area {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .upper-nav-area {
+        display: grid;
+        padding: 3px 10px;
+        #logo-text {
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 38px 1fr;
+            align-items: center;
+            border-radius: 14px;
+        }
+        #logo-text:hover {
+            background-color: var(--hover-color);
+            svg {
+                fill: var(--logo-color);
+            }
+            p {
+                color: var(--logo-color);
+            }
+        }
+        .home-icon {
+            background-color: var(--hover-color);
+            svg {
+                fill: var(--logo-color);
+            }
+            p {
+                color: var(--logo-color);
+            }
+        }
+    }
+
+    .lower-nav-area {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        .lower-nav-btn-area {
+            display: grid;
+            padding: 3px 10px;
+            #logo-text {
+                padding: 0 20px;
+                display: grid;
+                grid-template-columns: 38px 1fr;
+                align-items: center;
+                border-radius: 14px;
+            }
+            #logo-text:hover {
+                background-color: var(--hover-color);
+                svg {
+                    fill: var(--logo-color);
+                }
+                p {
+                    color: var(--logo-color);
+                }
+            }
+        }
+    }
+}
+
+        /*   -- HEADER SECTION --   */
+
+header {
+    background-color: var(--main-color);
+}
+
+        /*   -- MAIN BODY SECTION --   */
+
+main {
+    background-color: var(--main-color);
+}
