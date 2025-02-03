@@ -268,7 +268,7 @@ main {
                 grid-template-columns: 1fr 35px 50px;
                 place-items: center;
                 a > svg {
-                    height: 20px;
+                    height: 19px;
                 }
             }
         }
