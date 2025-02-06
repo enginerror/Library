@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    background-color: var(--main-color);
+    font-family: "Outfit", serif;
+    cursor: default;
+}
+
+:root {
+    --main-color: #000;
+    --font-color: #f1f1f1;
+    --border-color: #222222;
+    --logo-color: #447cdf;
+
+    --hover-color: #191B28;
+    --search-area-bg: #1F1F1F;
+    --box-color: #101010;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./Norse-Bold.otf);
+}
+
+button {
+    border: none;
+}
+
+aside {
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    border-radius: 0 20px 20px 0;
+    border-right: 2px solid var(--border-color);
+}
+
+.logo-area {
+    display: grid;
+    place-content: center;
+    #logo-font {
+        font-family: Norse-Bold;
+        font-size: 30px;
+        color: var(--logo-color);
+    }
+}
+.nav-container {
+    padding: 0 30px;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    gap: 15px;
+    .nav-heading {
+        display: grid;
+        align-items: center;
+        color: var(--font-color);
+    }
+    
+}
+
+.nav-area {
+    display: grid;
+    grid-template-rows: 60px 60px 60px 20px 60px 1fr;
+    gap: 12px;
+}
+
+.nav-grid {
+    display: grid;
+    gap: 2px;
+    .nav-font {
+        font-size: 13px;
+        color: var(--font-color);
+    }
+    #nav-search {
+        font-size: 15px;
+        background-color: transparent;
+        border: none;
+        font-family: "Outfit", serif;
+        background-color: var(--search-area-bg);
+        color: var(--font-color);
+        height: 30px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 20px;
+    }
+    #nav-search:focus {
+        outline: 2px solid var(--logo-color);
+    }
+}
+
+.check {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    .nav-font {
+        color: var(--font-color);
+        font-size: 13px;
+    }
+}
+
+.add-btn {
+    display: grid;
+    align-items: center;
+    button {
+        height: 30px;
+        width: 100%;
+        background-color: var(--logo-color);
+        border-radius: 20px;
+    }
+    button:hover {
+        border: 2px solid var(--logo-color);
+        background-color: transparent;
+        transition: .5s;
+    }
+}
